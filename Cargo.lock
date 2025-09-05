@@ -1142,9 +1142,8 @@ dependencies = [
 
 [[package]]
 name = "libsql"
-version = "0.9.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "480e95d8e7859b837ff72e92ae59f513095e8f16565b659030fbd1c7b3771685"
+version = "0.9.9"
+source = "git+https://github.com/trysoma/tursodatabase-libsql?branch=ffi-null-pointer-exception#1db6318075fedc41f169dc30e21bf17e5f2235c1"
 dependencies = [
  "anyhow",
  "async-stream",
@@ -1182,9 +1181,8 @@ dependencies = [
 
 [[package]]
 name = "libsql-ffi"
-version = "0.9.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "751364e30fb9c9eaad7d6e990dcfe7aa12c9b016779444c126633d3fd6d4d160"
+version = "0.9.9"
+source = "git+https://github.com/trysoma/tursodatabase-libsql?branch=ffi-null-pointer-exception#1db6318075fedc41f169dc30e21bf17e5f2235c1"
 dependencies = [
  "bindgen",
  "cc",
@@ -1193,9 +1191,8 @@ dependencies = [
 
 [[package]]
 name = "libsql-hrana"
-version = "0.9.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ea2fbe44885bfd021e58c95afdb57eb83821729032fd3c4b81ac7094178d4481"
+version = "0.9.9"
+source = "git+https://github.com/trysoma/tursodatabase-libsql?branch=ffi-null-pointer-exception#1db6318075fedc41f169dc30e21bf17e5f2235c1"
 dependencies = [
  "base64 0.21.7",
  "bytes",
@@ -1205,9 +1202,8 @@ dependencies = [
 
 [[package]]
 name = "libsql-rusqlite"
-version = "0.9.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bf0408ddfc0632ce2863ae6d839f893691f5a323bd2ffb2472def4c8e2c8d489"
+version = "0.9.9"
+source = "git+https://github.com/trysoma/tursodatabase-libsql?branch=ffi-null-pointer-exception#1db6318075fedc41f169dc30e21bf17e5f2235c1"
 dependencies = [
  "bitflags 2.9.0",
  "fallible-iterator 0.2.0",
@@ -1220,8 +1216,7 @@ dependencies = [
 [[package]]
 name = "libsql-sqlite3-parser"
 version = "0.13.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "15a90128c708356af8f7d767c9ac2946692c9112b4f74f07b99a01a60680e413"
+source = "git+https://github.com/trysoma/tursodatabase-libsql?branch=ffi-null-pointer-exception#1db6318075fedc41f169dc30e21bf17e5f2235c1"
 dependencies = [
  "bitflags 2.9.0",
  "cc",
@@ -1237,9 +1232,8 @@ dependencies = [
 
 [[package]]
 name = "libsql-sys"
-version = "0.9.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "095eb8c54664683acce885caf448ca89ea03189caecd897579930e968aee41c5"
+version = "0.9.9"
+source = "git+https://github.com/trysoma/tursodatabase-libsql?branch=ffi-null-pointer-exception#1db6318075fedc41f169dc30e21bf17e5f2235c1"
 dependencies = [
  "bytes",
  "libsql-ffi",
@@ -1263,9 +1257,8 @@ dependencies = [
 
 [[package]]
 name = "libsql_replication"
-version = "0.9.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6e324539ae77465c406f214ae51cf7e0067819d6778f01947e2cd9c2222f41fd"
+version = "0.9.9"
+source = "git+https://github.com/trysoma/tursodatabase-libsql?branch=ffi-null-pointer-exception#1db6318075fedc41f169dc30e21bf17e5f2235c1"
 dependencies = [
  "aes",
  "async-stream",
