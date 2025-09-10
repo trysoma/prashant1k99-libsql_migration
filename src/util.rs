@@ -57,7 +57,7 @@ pub(crate) async fn execute_migration(
         .await?;
     }
 
-    conn.execute(&sql_script, libsql::params!()).await?;
+    conn.execute_batch(&sql_script).await?;
 
     conn.execute(
         "UPDATE libsql_migrations SET status = true, exec_time = CURRENT_TIMESTAMP WHERE id = ?",

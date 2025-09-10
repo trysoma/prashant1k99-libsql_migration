@@ -77,12 +77,10 @@ pub async fn migrate(
     migrations_folder: PathBuf,
 ) -> Result<bool, LibsqlDirMigratorError> {
     validate_migration_folder(&migrations_folder)?;
-
     create_migration_table(conn).await?;
 
     let files_to_run = check_dir_for_sql_files(migrations_folder.clone())
         .map_err(|e| LibsqlDirMigratorError::ErrorWhileGettingSQLFiles(e.to_string()))?;
-
     if files_to_run.is_empty() {
         return Ok(false);
     };
@@ -98,11 +96,14 @@ pub async fn migrate(
                 file_id.to_str()
             ))
         })?;
-
         if let MigrationResult::Executed =
             execute_migration(conn, file_id.to_str().unwrap().to_string(), file_data).await?
         {
+            println!("executed migration: {:?}", file_id.to_str().unwrap());
             did_new_migration = true
+        }
+        else {
+            println!("already executed migration: {:?}", file_id.to_str().unwrap());
         }
     }
 
