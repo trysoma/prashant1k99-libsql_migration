@@ -13,7 +13,8 @@ categories = ["database", "command-line-utilities"]
 [dependencies]
 reqwest = { version = "0.12.15", optional = true, features = ["json"] }
 # libsql = { path = "./../forks/tursodatabase-libsql/libsql", features = ["sync", "replication"] }
-libsql = { git = "https://github.com/trysoma/tursodatabase-libsql", branch = "ffi-null-pointer-exception", features = ["sync", "replication"] }
+# this is branch ffi-null-pointer-exception pinned to this commit
+libsql = { git = "https://github.com/trysoma/tursodatabase-libsql", rev = "25266445e3d3b76ed781d5a7acb82f1ece29c09e", features = ["sync", "replication"] }
 serde = { version = "1.0.219", optional = true }
 tokio = { version = "1", features = ["rt"] }
 serde_json = { version = "1.0.140", optional = true }
