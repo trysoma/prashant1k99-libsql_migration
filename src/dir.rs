@@ -45,6 +45,7 @@ use crate::util::{
     MigrationResult, create_migration_table, execute_migration, validate_migration_folder,
 };
 use libsql::Connection;
+use tracing::debug;
 use std::{fs, io, path::PathBuf};
 
 fn check_dir_for_sql_files(root_path: PathBuf) -> Result<Vec<PathBuf>, io::Error> {
@@ -99,11 +100,11 @@ pub async fn migrate(
         if let MigrationResult::Executed =
             execute_migration(conn, file_id.to_str().unwrap().to_string(), file_data).await?
         {
-            println!("executed migration: {:?}", file_id.to_str().unwrap());
+            debug!("executed migration: {:?}", file_id.to_str().unwrap());
             did_new_migration = true
         }
         else {
-            println!("already executed migration: {:?}", file_id.to_str().unwrap());
+            debug!("already executed migration: {:?}", file_id.to_str().unwrap());
         }
     }
 
